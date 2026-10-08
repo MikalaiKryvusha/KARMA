@@ -13,7 +13,7 @@
 
 **KARMA** — **K**rinik **A**gent **R**elations & **M**ind **A**pproximation.
 
-Fifteen numbers per character that make NPCs afraid, angry, friendly, depressed, aggressive or in love — and make them
+Seventeen numbers per character that make NPCs afraid, angry, friendly, depressed, aggressive or in love — and make them
 act on it. A small set of simple values and formulas; the variety comes from how they combine. Built to plug into a game's
 own code and mechanics, for any game.
 
