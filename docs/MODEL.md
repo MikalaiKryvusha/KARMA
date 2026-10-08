@@ -3,7 +3,7 @@
 **KARMA** — Krinik Agent Relations & Mind Approximation.
 
 > **Status:** draft 0.2 (2026-10-08; 0.2 adds the Aims layer, §5). The layers and the loop are taken from published models and shipped games (sources at
-> the end); the exact trait and need lists are a proposal awaiting the owner's choice — marked `[AI]`.
+> the end); the six traits are the owner's choice (2026-10-08); the need list is a proposal awaiting it — marked `[AI]`.
 > **Research behind it:** [`recon-psyche.md`](https://github.com/MikalaiKryvusha/kumm/blob/main/researches/medieval-dynasty/recon-psyche.md)
 > (quotes from every source, risks, the ALMA sign trap).
 
@@ -13,11 +13,11 @@
 without a reader is not added — Dwarf Fortress has 50 personality facets, and its own wiki says "many of the gameplay
 effects of personality facets are as yet unknown".
 
-## 1. State of one agent — 15 numbers and a sparse list
+## 1. State of one agent — 16 numbers and a sparse list
 
 | Layer | Values | Range | Changes | Source |
 |---|---|---|---|---|
-| Character | 5 bipolar traits | −1…+1 | almost never; a breakdown may shift one | The Sims 1 sliders · Crusader Kings III opposite traits |
+| Character | 6 bipolar traits | −1…+1 | almost never; a breakdown may shift one | The Sims 1 sliders · Crusader Kings III opposite traits |
 | Mood | Pleasure, Arousal, Dominance | −1…+1 each | every tick: pulled by emotions, drifts back to rest | Mehrabian's PAD · ALMA (Gebhard 2005) |
 | Needs | 6 counters | 0…1 | decay every tick at trait-scaled rates; refilled by actions | The Sims motives |
 | Stress | 1 counter | 0…400 | grows from acting against one's traits, unmet needs, bad mood; slow decay | Crusader Kings III · Dwarf Fortress |
@@ -25,15 +25,16 @@ effects of personality facets are as yet unknown".
 | Memories | a few strong facts (`hurt`, `gave`, `saved`) | — | re-fire their emotion now and then, fade with time | Dwarf Fortress re-lived memories |
 | Aims | 1 dream · 1–3 milestones · ~4 wishes · ~3 fears | goals with utility −1…+1 | dream: chosen once, changed only by life events; wishes and fears: re-rolled daily | The Sims 2/3/4 · Dwarf Fortress dreams (§5) |
 
-[AI] **Proposed traits** (each pole is a person; each names its readers):
+**Traits — six, accepted by the owner** (2026-10-08 15:38, all six of the proposed list: «почему не все шеть? выглядят
+логично»). Each pole is a person; each names its readers:
 - Brave ↔ Craven — resting Dominance; flee or fight; risky shortcut or safe road.
 - Kind ↔ Cruel — sharing with friends, pity, robbery, insult chance.
 - Outgoing ↔ Reserved — company-need decay rate; how often rumours are passed.
 - Hot-tempered ↔ Calm — Arousal gain from emotions; brawl chance; breakdown threshold.
 - Diligent ↔ Lazy — work speed and hours; sleep-need decay rate.
-- Candidate sixth: Greedy ↔ Generous — prices, theft, gifts.
+- Greedy ↔ Generous — prices, theft, gifts.
 
-**Proposed needs:** food · water · sleep · warmth · company · intimacy.[/AI]
+[AI] **Proposed needs:** food · water · sleep · warmth · company · intimacy.[/AI]
 
 ## 2. Mood — eight named states for free
 
@@ -52,7 +53,7 @@ D = 0.25·O + 0.17·C + 0.60·E − 0.32·A
 ```
 ⚠️ `S` is emotional **stability** (= −Neuroticism). ALMA prints the term as "Neuroticism", which inverts its sign: with the
 label as printed, a neurotic agent rests pleased and calm. The sign is checked against Mehrabian 1996, equation 4
-("Emotional Stability = 0.50P − 0.55A"). KARMA's own five traits map onto P, A, D directly; this formula is kept for
+("Emotional Stability = 0.50P − 0.55A"). KARMA's own six traits map onto P, A, D directly; this formula is kept for
 projects that already store the Big Five.
 
 ## 3. Events become emotions — appraisal (GAMYGDALA)
