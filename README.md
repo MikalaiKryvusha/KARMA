@@ -9,7 +9,7 @@
 </p>
 
 ![License](https://img.shields.io/badge/license-MIT-green)
-![Status](https://img.shields.io/badge/status-draft%200.1-orange)
+![Status](https://img.shields.io/badge/status-draft%200.2-orange)
 
 **KARMA** — **K**rinik **A**gent **R**elations & **M**ind **A**pproximation.
 
@@ -27,6 +27,7 @@ own code and mechanics, for any game.
 | Stress | 1 | breakdowns when life goes against one's nature |
 | Relations | one number per acquaintance | who shares food and news, who takes revenge |
 | Memories | a few strong facts | old wrongs and old kindness that flare up again |
+| Aims | a dream · milestones · today's wishes and fears | strategy, tactics, operation: what the life is for, the next step towards it, what pulls right now |
 
 Events become feelings without a script per character: each role has a few goals, each event says which goals it helps or
 hurts. The same rumour of a bear near the marsh frightens the herb gatherer and gives the hunter hope. What was seen counts
@@ -37,7 +38,7 @@ Crusader Kings III, Dwarf Fortress. Full specification: [docs/MODEL.md](docs/MOD
 
 ## Status
 
-Draft 0.1: the model is specified; a reference implementation in C# comes next. First game: a living-world mod for
+Draft 0.2: the model is specified; a reference implementation in C# comes next. First game: a living-world mod for
 Medieval Dynasty.
 
 ## License
@@ -72,6 +73,7 @@ MIT © Mikalai Kryvusha (KOT KRINIK)
 | Стресс | 1 | срывы, когда жизнь идёт против натуры |
 | Отношения | по числу на каждого знакомого | с кем делятся едой и новостями, кому мстят |
 | Память | несколько сильных фактов | старые обиды и старое добро, которые вспыхивают снова |
+| Стремления | мечта · вехи · желания и страхи на сегодня | стратегия, тактика, операция: ради чего жизнь, следующий шаг к этому, что тянет прямо сейчас |
 
 Событие становится чувством без сценария на каждого: у роли несколько целей, у события — каким целям оно помогает или
 мешает. Один и тот же слух о медведе у болота пугает травницу и обнадёживает охотника. Увиденное весит полностью,
@@ -82,7 +84,7 @@ Crusader Kings III, Dwarf Fortress. Полная спецификация — [d
 
 ## Состояние
 
-Черновик 0.1: модель описана, следующая — эталонная реализация на C#. Первая игра — мод живого мира для Medieval Dynasty.
+Черновик 0.2: модель описана, следующая — эталонная реализация на C#. Первая игра — мод живого мира для Medieval Dynasty.
 
 ## Лицензия
 

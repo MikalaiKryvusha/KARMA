@@ -2,7 +2,7 @@
 
 **KARMA** — Krinik Agent Relations & Mind Approximation.
 
-> **Status:** draft 0.1 (2026-10-08). The layers and the loop are taken from published models and shipped games (sources at
+> **Status:** draft 0.2 (2026-10-08; 0.2 adds the Aims layer, §5). The layers and the loop are taken from published models and shipped games (sources at
 > the end); the exact trait and need lists are a proposal awaiting the owner's choice — marked `[AI]`.
 > **Research behind it:** [`recon-psyche.md`](https://github.com/MikalaiKryvusha/kumm/blob/main/researches/medieval-dynasty/recon-psyche.md)
 > (quotes from every source, risks, the ALMA sign trap).
@@ -23,6 +23,7 @@ effects of personality facets are as yet unknown".
 | Stress | 1 counter | 0…400 | grows from acting against one's traits, unmet needs, bad mood; slow decay | Crusader Kings III · Dwarf Fortress |
 | Relations | `like(a, b)` per known agent or group | −100…+100 | changed by events b caused for a, talk, gifts, insults | RimWorld opinion · GAMYGDALA `like` |
 | Memories | a few strong facts (`hurt`, `gave`, `saved`) | — | re-fire their emotion now and then, fade with time | Dwarf Fortress re-lived memories |
+| Aims | 1 dream · 1–3 milestones · ~4 wishes · ~3 fears | goals with utility −1…+1 | dream: chosen once, changed only by life events; wishes and fears: re-rolled daily | The Sims 2/3/4 · Dwarf Fortress dreams (§5) |
 
 [AI] **Proposed traits** (each pole is a person; each names its readers):
 - Brave ↔ Craven — resting Dominance; flee or fight; risky shortcut or safe road.
@@ -79,7 +80,38 @@ toward it, and once past it is **pushed** further into the same octant ("a perso
 experiences the person make that are supporting this mood"). With no emotions the mood **decays** back to its resting
 point. Emotions decay faster than mood.
 
-## 5. The tick (once per game hour, over flat arrays)
+## 5. Aims — strategy, tactics, operation
+
+Three levels, told apart by **purpose, not by duration**; each lower level says what it serves — "…, *so that* <the level
+above>" — and each is a condition that is either met or not.
+
+| Level | What it is | How many | Born from | Example (a medieval village) |
+|---|---|---|---|---|
+| **Strategy — the dream** | the meaning of this life: an end state | 1 | traits + seeding memories, at coming of age (The Sims 3: "related to the traits they have"; a child who saw a death may dream of revenge) | own a smithy · be the village elder · raise a big family · grow rich · see the world · avenge my father |
+| **Tactics — milestones** | intermediate goals on the way, for this stretch of life | 1–3 at a time, ~4 per dream (The Sims 4: "four milestones") | the dream + the agent's situation | save 200 coins *so that* I can buy the smithy · become journeyman *so that* the master hands over the forge |
+| **Operation — wishes and fears** | what pulls right now | ~4 wishes, ~3 fears (The Sims 2: "four want slots and three fear slots") | re-rolled daily from traits, role, place, friends, season | sell the axe at the market today · fear: the bandits on the north road |
+
+**One mechanism, not a new engine.** A dream, a milestone and a wish are §3 goals with a level and a utility (dream
+≈ 0.9–1.0, milestone ≈ 0.5–0.8, wish ≈ 0.1–0.3); a **fear is a goal with negative utility**. Appraisal therefore gives
+hope when a milestone draws near, disappointment when it slips, fear when a feared thing becomes likely — about one's own
+life, with no extra code.
+
+**Rules:**
+1. **Nesting bonus.** An action that serves a milestone that serves the dream is worth more (The Sims 3: wishes "related
+   to a Sim's lifetime wish will provide 50% more").
+2. **Needs come first when urgent.** The decision layer scores needs by their urgency curve and aims by utility × nesting;
+   a starving dreamer eats first.
+3. **Events change plans, not the calendar.** A milestone is replanned when an event blocks it ("no plan … extends with any
+   certainty beyond the first contact"); a life-shaking event (family killed, house burnt) may replace the dream itself.
+4. **Distance from the dream feeds stress.** Long stalls and failed milestones add stress (§1); a fulfilled fear hits like
+   The Sims 2's "aspiration failure".
+5. **A realised dream marks the person.** A long-lasting strong positive emotion (The Sims 2: Platinum mood that "will decay
+   very slowly") and a **reward trait** (The Sims 4); then a new dream may be chosen.
+6. **Readers (§0).** The dream must change something visible: which work the agent seeks, saving instead of spending,
+   moving to another village, courting, turning to crime for revenge; and a line the world can tell ("dreams of his own
+   smithy").
+
+## 6. The tick (once per game hour, over flat arrays)
 
 1. Appraise new events the agent saw or heard (§3).
 2. Pull mood by active emotions; decay mood toward rest; decay emotions (§4).
@@ -88,15 +120,17 @@ point. Emotions decay faster than mood.
    by weight from the menu of the current octant: Anxious → hide, flee home, refuse the risky road; Hostile → brawl, theft,
    revenge on a remembered offender; Bored → drink, idle, leave the settlement. After a breakdown — **catharsis**: a
    strong positive emotion for a few days, so there is no death spiral.
-5. The decision layer (utility scoring: needs × traits × mood) picks the next action. KARMA supplies the numbers; the game
-   supplies the actions.
+5. The decision layer (utility scoring: needs × aims × traits × mood) picks the next action. KARMA supplies the numbers;
+   the game supplies the actions.
+6. Once a game day: re-roll wishes and fears; check milestones (met → next one, blocked → replan); add stress for a stalled
+   dream (§5).
 
-## 6. Cost
+## 7. Cost
 
 15 floats per agent plus a sparse relation list. GAMYGDALA's authors measured appraisal for 5,000 NPCs × 5 goals × 20
 beliefs at 0.816 s, single thread, 3 GHz — a worst case; an hourly tick appraises only new events.
 
-## 7. Guards against known failures
+## 8. Guards against known failures
 
 - **Runaway behaviour** (Oblivion's Radiant AI beta, The Sims' addictive Joy Booth): vetoes in the decision layer,
   breakdown cooldowns, catharsis.
@@ -113,3 +147,6 @@ beliefs at 0.816 s, single thread, 3 GHz — a worst case; an hourly tick apprai
   Computing* 5(1), 2014.
 - Forbus, K., Wright, W. "Some notes on programming objects in The Sims", Northwestern University.
 - RimWorld, The Sims, Crusader Kings III, Dwarf Fortress — community and official wikis (quoted in the research doc).
+- Aims (§5): The Sims Wiki — "Lifetime wish", "Wish", "Wants and fears", "Aspiration (The Sims 4)"; Dwarf Fortress Wiki —
+  "Personality goal"; levels by purpose and the "so that" link — military doctrine (JP 3-0, MCDP 1) and Hoshin Kanri, as
+  summarised in the Unliminium project's research on strategy, tactics and operation.
