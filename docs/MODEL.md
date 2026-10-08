@@ -3,7 +3,7 @@
 **KARMA** — Krinik Agent Relations & Mind Approximation.
 
 > **Status:** draft 0.2 (2026-10-08; 0.2 adds the Aims layer, §5). The layers and the loop are taken from published models and shipped games (sources at
-> the end); the six traits are the owner's choice (2026-10-08); the need list is a proposal awaiting it — marked `[AI]`.
+> the end); the six traits and the seven needs are the owner's choice (2026-10-08).
 > **Research behind it:** [`recon-psyche.md`](https://github.com/MikalaiKryvusha/kumm/blob/main/researches/medieval-dynasty/recon-psyche.md)
 > (quotes from every source, risks, the ALMA sign trap).
 
@@ -13,13 +13,13 @@
 without a reader is not added — Dwarf Fortress has 50 personality facets, and its own wiki says "many of the gameplay
 effects of personality facets are as yet unknown".
 
-## 1. State of one agent — 16 numbers and a sparse list
+## 1. State of one agent — 17 numbers and a sparse list
 
 | Layer | Values | Range | Changes | Source |
 |---|---|---|---|---|
 | Character | 6 bipolar traits | −1…+1 | almost never; a breakdown may shift one | The Sims 1 sliders · Crusader Kings III opposite traits |
 | Mood | Pleasure, Arousal, Dominance | −1…+1 each | every tick: pulled by emotions, drifts back to rest | Mehrabian's PAD · ALMA (Gebhard 2005) |
-| Needs | 6 counters | 0…1 | decay every tick at trait-scaled rates; refilled by actions | The Sims motives |
+| Needs | 7 counters | 0…1 | decay every tick at trait-scaled rates; refilled by actions | The Sims motives |
 | Stress | 1 counter | 0…400 | grows from acting against one's traits, unmet needs, bad mood; slow decay | Crusader Kings III · Dwarf Fortress |
 | Relations | `like(a, b)` per known agent or group | −100…+100 | changed by events b caused for a, talk, gifts, insults | RimWorld opinion · GAMYGDALA `like` |
 | Memories | a few strong facts (`hurt`, `gave`, `saved`) | — | re-fire their emotion now and then, fade with time | Dwarf Fortress re-lived memories |
@@ -34,7 +34,11 @@ effects of personality facets are as yet unknown".
 - Diligent ↔ Lazy — work speed and hours; sleep-need decay rate.
 - Greedy ↔ Generous — prices, theft, gifts.
 
-[AI] **Proposed needs:** food · water · sleep · warmth · company · intimacy.[/AI]
+**Needs — seven, accepted by the owner** (2026-10-08 15:41: «оставляем семь»): food · water · sleep · warmth · company ·
+intimacy · leisure. Leisure was the owner's addition («а как же самореализация/досуг?»); self-realization is not a need
+counter — it lives in the Aims layer (dream · milestones, §5).
+[AI] Readers of leisure: evening rest by the fire, talk, feasts; an empty counter slows work and adds stress (RimWorld
+Recreation, The Sims Fun).[/AI]
 
 ## 2. Mood — eight named states for free
 

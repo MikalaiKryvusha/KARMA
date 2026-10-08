@@ -23,7 +23,7 @@ own code and mechanics, for any game.
 |---|---|---|
 | Character | 6 traits, each a pair of opposites | where mood rests, how fast needs grow, which breakdowns are possible |
 | Mood | 3: pleasure · arousal · dominance | 8 named states: afraid, angry, depressed, relaxed, exuberant… |
-| Needs | 6: food · water · sleep · warmth · company · intimacy | what the character goes looking for |
+| Needs | 7: food · water · sleep · warmth · company · intimacy · leisure | what the character goes looking for |
 | Stress | 1 | breakdowns when life goes against one's nature |
 | Relations | one number per acquaintance | who shares food and news, who takes revenge |
 | Memories | a few strong facts | old wrongs and old kindness that flare up again |
@@ -69,7 +69,7 @@ MIT © Mikalai Kryvusha (KOT KRINIK)
 |---|---|---|
 | Характер | 6 черт, каждая — пара противоположностей | где отдыхает настроение, как быстро растут нужды, какие срывы возможны |
 | Настроение | 3: удовольствие · возбуждение · власть | 8 состояний: напуган, зол, подавлен, спокоен, ликует… |
-| Нужды | 6: еда · вода · сон · тепло · общение · близость | за чем человек идёт |
+| Нужды | 7: еда · вода · сон · тепло · общение · близость · досуг | за чем человек идёт |
 | Стресс | 1 | срывы, когда жизнь идёт против натуры |
 | Отношения | по числу на каждого знакомого | с кем делятся едой и новостями, кому мстят |
 | Память | несколько сильных фактов | старые обиды и старое добро, которые вспыхивают снова |
