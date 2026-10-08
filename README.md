@@ -13,7 +13,7 @@
 
 **KARMA** — **K**rinik **A**gent **R**elations & **M**ind **A**pproximation.
 
-Seventeen numbers per character that make NPCs afraid, angry, friendly, depressed, aggressive or in love — and make them
+Eighteen numbers per character that make NPCs afraid, angry, friendly, depressed, aggressive or in love — and make them
 act on it. A small set of simple values and formulas; the variety comes from how they combine. Built to plug into a game's
 own code and mechanics, for any game.
 
@@ -21,7 +21,7 @@ own code and mechanics, for any game.
 
 | Layer | Numbers | What it drives |
 |---|---|---|
-| Character | 6 traits, each a pair of opposites | where mood rests, how fast needs grow, which breakdowns are possible |
+| Character | 7 traits, each a pair of opposites | where mood rests, how fast needs grow, which breakdowns are possible |
 | Mood | 3: pleasure · arousal · dominance | 8 named states: afraid, angry, depressed, relaxed, exuberant… |
 | Needs | 7: food · water · sleep · warmth · company · intimacy · leisure | what the character goes looking for |
 | Stress | 1 | breakdowns when life goes against one's nature |
@@ -67,7 +67,7 @@ MIT © Mikalai Kryvusha (KOT KRINIK)
 
 | Слой | Чисел | Что решает |
 |---|---|---|
-| Характер | 6 черт, каждая — пара противоположностей | где отдыхает настроение, как быстро растут нужды, какие срывы возможны |
+| Характер | 7 черт, каждая — пара противоположностей | где отдыхает настроение, как быстро растут нужды, какие срывы возможны |
 | Настроение | 3: удовольствие · возбуждение · власть | 8 состояний: напуган, зол, подавлен, спокоен, ликует… |
 | Нужды | 7: еда · вода · сон · тепло · общение · близость · досуг | за чем человек идёт |
 | Стресс | 1 | срывы, когда жизнь идёт против натуры |
