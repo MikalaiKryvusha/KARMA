@@ -11,7 +11,7 @@
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Status](https://img.shields.io/badge/status-draft%200.1-orange)
 
-**KARMA** — **K**rinik's **A**gent **R**elations · **M**ood · **A**ppetites.
+**KARMA** — **K**rinik **A**gent **R**elations & **M**ind **A**pproximation.
 
 Fifteen numbers per character that make NPCs afraid, angry, friendly, depressed, aggressive or in love — and make them
 act on it. A small set of simple values and formulas; the variety comes from how they combine. Built to plug into a game's
@@ -56,7 +56,7 @@ MIT © Mikalai Kryvusha (KOT KRINIK)
   <a href="#russian"><img src="https://img.shields.io/badge/Русский-C0392B?style=for-the-badge" alt="Русский"></a>
 </p>
 
-**KARMA** — **K**rinik's **A**gent **R**elations · **M**ood · **A**ppetites: отношения, настроение, нужды.
+**KARMA** — **K**rinik **A**gent **R**elations & **M**ind **A**pproximation: приближение отношений и разума агента.
 
 Пятнадцать чисел на персонажа — и NPC пугается, злится, дружит, впадает в тоску, лезет в драку, влюбляется, а главное —
 поступает так, как чувствует. Показатели и формулы простые, разнообразие рождается из их сочетания. Модель встраивается в

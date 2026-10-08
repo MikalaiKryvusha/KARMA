@@ -1,5 +1,7 @@
 # KARMA — the model
 
+**KARMA** — Krinik Agent Relations & Mind Approximation.
+
 > **Status:** draft 0.1 (2026-10-08). The layers and the loop are taken from published models and shipped games (sources at
 > the end); the exact trait and need lists are a proposal awaiting the owner's choice — marked `[AI]`.
 > **Research behind it:** [`recon-psyche.md`](https://github.com/MikalaiKryvusha/kumm/blob/main/researches/medieval-dynasty/recon-psyche.md)
